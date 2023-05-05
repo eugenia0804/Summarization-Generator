@@ -8,7 +8,7 @@ from gensim.summarization import summarize
 from gensim.utils import simple_preprocess
 
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 
 start_time = time.time()
 
@@ -61,12 +61,12 @@ def final_summary(text):
             '''
     prompt = detailed_prompt + text
     response = openai.Completion.create(
-      engine="text-davinci-002",
+      engine="text-davinci-003",
       prompt=prompt,
       max_tokens=500,
       n=1,
       stop=None,
-      temperature=0.5,
+      temperature=0.25,
     )
     summary = response.choices[0].text.strip()
     return summary
@@ -97,11 +97,10 @@ def summary_generator(processed_df):
     output['Word Count'] = wordcount
     return output
 
-processed_df = processor('talk.csv')
+processed_df = processor('focusgroupday2.csv')
 print(processed_df['Start Time'])
-#processed_df.to_csv('token_cut.csv', index=False)
 df = summary_generator(processed_df)
-df.to_csv('Talk_format_bytoken.csv', index=False)
+df.to_csv('Output_focusgroup.csv', index=False)
 
 end_time = time.time()
 run_time = end_time - start_time
