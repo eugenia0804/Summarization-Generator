@@ -1,0 +1,10 @@
+Overall Summary: The conversation discussed the various ways of designing for inclusivity and the outcomes of this work, such as multiple interfaces, multiple analytics, and multiple technologies. 
+Details and Decisions: 
+• Multiple interfaces can be used to promote accessibility 
+• Technologies such as Multi-craft and Blink are being used to support small group discussions 
+• Analytics are being used to measure learning and study student behavior 
+• Wooden blocks are being used to facilitate complex skills 
+• Eye gaze is being used to control games 
+• Interviews are being conducted to gain insight into student perceptions of computer science 
+• Data is being collected to train models and make predictions 
+• Role models are being used to promote inclusion
