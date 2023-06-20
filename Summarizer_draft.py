@@ -9,7 +9,7 @@ from gensim.summarization import summarize
 from gensim.utils import simple_preprocess
 
 import openai
-openai.api_key = "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"
+openai.api_key = os.env['OPENAI_API_KEY']
 
 start_time = time.time()
 
