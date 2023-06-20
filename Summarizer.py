@@ -4,9 +4,10 @@ from typing import List
 import gensim
 from gensim.summarization import summarize
 from gensim.utils import simple_preprocess
+import os
 
 import openai
-openai.api_key = "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"
+openai.api_key = os.env['OPENAI_API_KEY']
 
 def combine_string(*args):
     combined_string = ""
